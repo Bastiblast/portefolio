@@ -24,6 +24,30 @@ const config: Config = {
         serif: ["var(--font-lora)", "Georgia", "serif"],
         quote: ["var(--font-ebg)", "Georgia", "serif"],
       },
+      keyframes: {
+        float: {
+          '0%, 100%': { transform: 'translateY(0)' },
+          '50%': { transform: 'translateY(-6px)' },
+        },
+        bob: {
+          '0%, 100%': { transform: 'translateY(0) rotate(0.5deg)' },
+          '50%': { transform: 'translateY(-8px) rotate(-0.5deg)' },
+        },
+        sway: {
+          '0%': { transform: 'rotate(-1.2deg)' },
+          '100%': { transform: 'rotate(1.2deg)' },
+        },
+        glow: {
+          '0%, 100%': { opacity: '0.75', filter: 'drop-shadow(0 0 0 rgba(185,122,86,0.0))' },
+          '50%': { opacity: '1', filter: 'drop-shadow(0 0 14px rgba(185,122,86,0.55))' },
+        },
+      },
+      animation: {
+        'float-slow': 'float 8s ease-in-out infinite',
+        'bob-slow': 'bob 7s ease-in-out infinite',
+        'sway-slower': 'sway 9s ease-in-out infinite alternate',
+        'glow': 'glow 2.8s ease-in-out infinite',
+      },
     },
   },
   plugins: [],

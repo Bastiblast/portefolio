@@ -55,7 +55,6 @@ export default function Hero({ locale }: { locale: Locale }) {
         whileInView={{ opacity: 1 }}
         viewport={{ once: true, amount: 0.5 }}
       >
-        <Firefly/>
         οἶδα ὅτι οὐδὲν οἶδα
       </motion.blockquote>
     </section>

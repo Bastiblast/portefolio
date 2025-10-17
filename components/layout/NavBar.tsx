@@ -40,7 +40,7 @@ export default function NavBar({ locale }: { locale: Locale }) {
     <header className="sticky top-0 z-50 backdrop-blur bg-background/70 border-b border-sage/30">
       <nav className="mx-auto flex max-w-6xl items-center justify-between px-4 py-3">
         <Link href={base} className="flex items-center gap-2 no-underline text-petrol">
-          <Image src="/odonate-mark.svg" alt="Odonate logo" width={28} height={28} priority />
+          <Image src="/logo.png" alt="Odonate logo" width={28} height={28} priority />
           <span className="font-serif tracking-wide text-lg">Odonate</span>
         </Link>
         <div className="hidden md:flex items-center gap-1">

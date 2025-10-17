@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Inter, Lora, EB_Garamond } from "next/font/google";
 import "./globals.css";
 import Providers from "@/components/layout/ThemeProvider";
+import DecorImages from "@/components/decor/DecorImages";
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
 const lora = Lora({ subsets: ["latin"], variable: "--font-lora" });
@@ -16,7 +17,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Odonate",
     description: "Solution informatique et de mise en ligne",
-    images: ["/logo.svg"],
+    images: ["/logo.png"],
   },
   metadataBase: new URL("https://odonate.fr"),
 };
@@ -28,8 +29,8 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="fr" suppressHydrationWarning>
-  <body className={`${inter.variable} ${lora.variable} ${ebg.variable} font-sans`}>
-
+      <body className={`${inter.variable} ${lora.variable} ${ebg.variable} font-sans`}>
+        <DecorImages />
         <Providers>{children}</Providers>
       </body>
     </html>
