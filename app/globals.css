@@ -1,0 +1,52 @@
+@import "tailwindcss";
+
+/* Couleurs personnalisées Odonate */
+:root {
+  --color-sage: #8DAA91;
+  --color-petrol: #355C7D;
+  --color-copper: #B97A56;
+  --color-ivory: #F5F3EE;
+  --color-charcoal: #2E2E2E;
+  
+  --background: #F5F3EE;
+  --foreground: #2E2E2E;
+  --border: #8DAA91;
+  
+  color-scheme: light;
+}
+
+html.dark {
+  --background: #2E2E2E;
+  --foreground: #F5F3EE;
+  --border: #8DAA91;
+  
+  color-scheme: dark;
+}
+
+* {
+  border-color: var(--border);
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+}
+
+/* Liens */
+a {
+  color: var(--color-petrol);
+  text-decoration-line: underline;
+  text-underline-offset: 4px;
+  transition: color 0.2s;
+}
+
+a:hover {
+  color: var(--color-copper);
+}
+
+/* Focus */
+:focus-visible {
+  outline: 2px solid var(--color-sage);
+  outline-offset: 2px;
+}

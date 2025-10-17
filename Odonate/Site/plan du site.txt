@@ -1,0 +1,96 @@
+﻿🌿 PLAN GÉNÉRAL DU SITE — « Portfolio Odonate »
+1. 🎯 Objectif
+Un site professionnel, minimaliste et poétique, présentant ton profil, ton expérience et tes projets web, tout en reflétant des valeurs de calme, maîtrise et équilibre.
+Il doit inspirer confiance et évoquer la nature et la durabilité — sans paraître ésotérique.
+
+2. 🧱 Architecture du site (Next.js – multi-pages)
+/
+├── app/
+│   ├── layout.tsx
+│   ├── page.tsx               → Accueil
+│   ├── about/
+│   │   └── page.tsx           → À propos
+│   ├── experience/
+│   │   └── page.tsx           → Expérience
+│   ├── projects/
+│   │   └── page.tsx           → Projets
+│   ├── blog/
+│   │   └── page.tsx           → Blog
+│   └── contact/
+│       └── page.tsx           → Contact
+│
+├── components/
+│   ├── ui/                    → shadcn components personnalisés
+│   ├── layout/                → NavBar, Footer, ThemeToggle
+│   ├── sections/              → Hero, Highlights, etc.
+│   └── cards/                 → ProjectCard, ExperienceCard
+│
+├── lib/                       → utilitaires (animations, data)
+└── public/                    → images, icônes
+
+3. 🎨 Charte graphique
+| Élément | Couleur | Code HEX | Usage principal |
+|----------|----------|-----------|
+| Vert sauge | #8DAA91 | Couleur principale (accents, boutons) |
+| Bleu pétrole | #355C7D | Titres, liens, éléments calmes |
+| Terre cuivrée | #B97A56 | Hover, icônes, détails chauds |
+| Blanc cassé | #F5F3EE | Fond clair |
+| Charbon | #2E2E2E | Texte, mode sombre |
+🌓 Mode sombre/clair :
+    • Clair : fond blanc cassé / texte charbon
+    • Sombre : fond charbon / texte blanc cassé / accents cuivre & sauge
+
+4. ✒️ Typographie
+    • Titres / Logo → Recoleta Light ou Canela Sans (si dispo sur Google Fonts : sinon Lora ou Playfair Display en fallback)
+    • Texte courant → Inter ou Work Sans
+    • Citations / Philosophie → EB Garamond Italic, couleur bleu pétrole
+
+5. 🪄 Mise en page générale
+Header
+    • Logo typographique “Odonate” (ou ton nom en typographie Recoleta)
+    • Navigation horizontale (ou menu mobile en drawer shadcn)
+    • Bouton mode sombre/clair (icône lune/soleil lucide-react)
+    • Lien vers GitHub / LinkedIn (icônes minimalistes)
+Hero (Accueil)
+    • Message principal : “Développeur web — équilibre et mouvement”
+    • Sous-texte court : “J’aide les marques à créer des expériences numériques vivantes et durables.”
+    • CTA : [Voir mes projets] [Me contacter]
+    • Animation subtile (fade-in ou scroll)
+À propos
+    • Portrait simple ou illustration abstraite
+    • Philosophie / Parcours / CV (lien vers ton CV en ligne)
+    • Citation grecque stylisée : οἶδα ὅτι οὐδὲν οἶδα
+Expérience
+    • Timeline fluide ou cards (shadcn) avec transitions
+    • Mises en avant des technologies (logos discrets)
+Projets
+    • Grille responsive (ProjectCard)
+    • Hover doux (lumière/cuivre)
+    • Filtres / catégories optionnels
+Blog
+    • Liste de posts (titre, résumé, date)
+    • Accent couleur sauge au survol
+Contact
+    • Formulaire minimal (Nom, Email, Message)
+    • Boutons LinkedIn / GitHub
+    • Citation finale douce
+Footer
+    • Lien vers CV, mentions légales, © + signature “Équilibre et mouvement”
+
+6. ⚙️ Fonctionnalités techniques
+    • Mode sombre/clair via next-themes
+    • Animations via framer-motion
+    • Composants UI : Button, Card, NavigationMenu, Input, Textarea, Separator, ThemeToggle
+    • SEO : next-seo
+    • Blog : contenu Markdown (ou futur CMS si souhaité)
+
+7. 📱 Responsive (mobile-first)
+    • Layout fluide basé sur grid et flex
+    • Marges et espaces respirants
+    • Taille de texte adaptée à la lisibilité
+
+8. 🔜 Étape suivante
+👉 Pour passer à la phase design + code, j’ai besoin que tu valides ou précises :
+    1. Le nom du site / logo (Odonate ? Ton nom ? Autre ?)
+    2. Souhaites-tu que je génère la première maquette (Hero + Navbar + Palette) directement en code React (NextJS + shadcn) ?
+    3. Souhaites-tu que je t’ajoute des animations naturelles (scroll, fade-in, etc.) inspirées du vol d’une libellule (discrètes et fluides) ?

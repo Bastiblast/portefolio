@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Odonate emblem only (no text). Stroke-only, scalable, and themeable via currentColor. -->
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  viewBox="0 0 512 512"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="22"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+  aria-hidden="true"
+>
+  <!-- Stylized dragonfly/bow-like emblem built as a single continuous path -->
+  <path d="
+    M256 256
+    C 230 210, 160 160, 120 192
+      80 224, 136 280, 200 272
+      232 268, 248 262, 256 256
+      264 262, 280 268, 312 272
+      376 280, 432 224, 392 192
+      352 160, 282 210, 256 256
+      282 302, 352 352, 392 320
+      432 288, 376 232, 312 240
+      280 244, 264 250, 256 256
+      248 250, 232 244, 200 240
+      136 232, 80 288, 120 320
+      160 352, 230 302, 256 256
+  "/>
+</svg>
