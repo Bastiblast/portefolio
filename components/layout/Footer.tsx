@@ -14,6 +14,7 @@ export default function Footer({ locale }: { locale: Locale }) {
           <Link href="https://lionside.fr/cvengine">CV</Link>
           <span className="opacity-60">Odonate.fr</span>
         </div>
+
       </div>
     </footer>
   );

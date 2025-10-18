@@ -4,12 +4,17 @@ import { motion } from "framer-motion";
 import Link from "next/link";
 import { hero } from "@/lib/i18n";
 import type { Locale } from "@/lib/i18n";
+import { useState } from "react";
 
 export default function Hero({ locale }: { locale: Locale }) {
   const t = hero[locale];
 
+  const [isPlaying,setIsPlaying] = useState(false)
+
+  const handleClick = () => setIsPlaying(!isPlaying)
+
   return (
-    <section className="mx-auto max-w-6xl px-4 py-20 sm:py-28">
+    <section className="md:ml-110 mx-auto max-w-6xl px-4 py-20 sm:py-28">
 
       <motion.h1
         className="font-serif text-3xl sm:text-5xl tracking-tight text-petrol"
@@ -48,7 +53,18 @@ export default function Hero({ locale }: { locale: Locale }) {
           {t.ctaContact}
         </Link>
       </motion.div>
-
+  
+          <>
+      <button onClick={handleClick}>
+        {isPlaying ? 'Pause' : 'Play'}
+      </button>
+      <video width="250">
+        <source
+          src="grok-libellule.mp4"
+          type="video/mp4"
+        />
+      </video>
+    </>
       <motion.blockquote
         className="mt-10 italic text-petrol font-quote"
         initial={{ opacity: 0 }}

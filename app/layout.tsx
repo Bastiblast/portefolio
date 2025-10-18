@@ -29,7 +29,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="fr" suppressHydrationWarning>
-      <body className={`${inter.variable} ${lora.variable} ${ebg.variable} font-sans`}>
+      <body className={`${inter.variable} ${lora.variable} ${ebg.variable} font-sans overflow-y-hidden`}>
         <DecorImages />
         <Providers>{children}</Providers>
       </body>
