@@ -2,6 +2,7 @@
 
 import { usePathname, useRouter } from "next/navigation";
 import type { Locale } from "@/lib/i18n";
+import { Button } from "@/components/ui/button";
 
 export function LanguageSwitch({ locale }: { locale: Locale }) {
   const router = useRouter();
@@ -15,12 +16,13 @@ export function LanguageSwitch({ locale }: { locale: Locale }) {
   };
 
   return (
-    <button
+    <Button
+      variant="ghost"
+      size="sm"
       onClick={toggle}
-      className="group px-3 py-2 rounded-md text-sm font-medium transition-all hover:bg-petrol/15"
       aria-label="Switch language"
     >
-      <span className="group-hover:text-petrol transition-colors">{locale === "fr" ? "EN" : "FR"}</span>
-    </button>
+      {locale === "fr" ? "EN" : "FR"}
+    </Button>
   );
 }
