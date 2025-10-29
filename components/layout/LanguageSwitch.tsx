@@ -17,7 +17,7 @@ export function LanguageSwitch({ locale }: { locale: Locale }) {
   return (
     <button
       onClick={toggle}
-      className="rounded-md px-3 py-2 text-sm text-foreground hover:bg-sage/20 hover:text-copper transition-colors"
+      className="rounded-md px-3 py-2 text-sm text-foreground hover:bg-petrol/15 hover:text-petrol transition-colors"
       aria-label="Switch language"
     >
       {locale === "fr" ? "EN" : "FR"}
