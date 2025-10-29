@@ -24,7 +24,7 @@ const ButtonGroupItem = React.forwardRef<
     ref={ref}
     className={cn(
       "px-3 py-2 rounded-md text-sm font-medium transition-colors",
-      "hover:bg-sage/20 focus:outline-none focus:ring-2 focus:ring-sage focus:ring-offset-2",
+      "hover:bg-petrol/15 hover:text-petrol focus:outline-none focus:ring-2 focus:ring-sage focus:ring-offset-2",
       "data-[active=true]:bg-sage data-[active=true]:text-ivory",
       className
     )}

@@ -28,11 +28,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="fr" suppressHydrationWarning>
-      <body className={`${inter.variable} ${lora.variable} ${ebg.variable} font-sans overflow-y-hidden`}>
-        <DecorImages />
-        <Providers>{children}</Providers>
-      </body>
-    </html>
-  );
-}
+     <html lang="fr" suppressHydrationWarning>
+       <body className={`${inter.variable} ${lora.variable} ${ebg.variable} font-sans h-screen overflow-hidden`}>
+         {false && <DecorImages />}
+         <Providers>{children}</Providers>
+       </body>
+     </html>
+   );
+ }

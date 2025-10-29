@@ -14,10 +14,10 @@ export default async function LocaleLayout({
   console.log("LocaleLayout - locale:", locale);
 
   return (
-    <>
+    <div className="flex flex-col h-screen">
       <NavBar locale={locale} />
-      <main>{children}</main>
+      <main className="flex-1 overflow-y-auto">{children}</main>
       <Footer locale={locale} />
-    </>
+    </div>
   );
 }

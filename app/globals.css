@@ -92,16 +92,10 @@ body {
   font-family: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
 }
 
-/* Liens */
-a {
-  color: var(--color-petrol);
-  text-decoration-line: underline;
-  text-underline-offset: 4px;
-  transition: color 0.2s;
-}
+
 
 a:hover {
-  color: var(--color-copper);
+  color: var(--color-sage);
 }
 
 /* Focus */
@@ -187,6 +181,11 @@ a:hover {
     @apply border-border outline-ring/50;
   }
   body {
-    @apply bg-background text-foreground;
+    @apply text-foreground;
+    background: linear-gradient(to top, #8DAA9110, #355C7D08, #F5F3EE);
   }
+}
+
+html.dark body {
+  background: linear-gradient(to top, #8DAA9118, #355C7D15, #2E2E2E);
 }

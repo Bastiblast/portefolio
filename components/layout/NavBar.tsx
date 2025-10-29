@@ -52,10 +52,10 @@ export default function NavBar({ locale }: { locale: Locale }) {
         </div>
         <div id="social-link" className="flex items-center">
           <ButtonGroup className="h-12 mr-4">
-            <Link href="https://github.com/Bastiblast/" aria-label="GitHub" className="p-2 no-underline hover:text-copper transition-colors">
+            <Link href="https://github.com/Bastiblast/" aria-label="GitHub" className="p-2 no-underline hover:text-sage transition-colors">
               <Github size={18} />
             </Link>
-            <Link href="https://www.linkedin.com/in/bastien-million-608740322" aria-label="LinkedIn" className="p-2 no-underline hover:text-copper transition-colors">
+            <Link href="https://www.linkedin.com/in/bastien-million-608740322" aria-label="LinkedIn" className="p-2 no-underline hover:text-petrol transition-colors">
               <Linkedin size={18} />
             </Link>
           </ButtonGroup>
