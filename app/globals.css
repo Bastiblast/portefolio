@@ -95,6 +95,10 @@ body {
 
 
 a:hover {
+  color: var(--color-petrol);
+}
+
+html.dark a:hover {
   color: var(--color-sage);
 }
 
@@ -182,7 +186,7 @@ a:hover {
   }
   body {
     @apply text-foreground;
-    background: linear-gradient(to top, #8DAA9110, #355C7D08, #F5F3EE);
+    background: linear-gradient(to top, #355b7da4, #6b98c0a4, #F5F3EE);
   }
 }
 

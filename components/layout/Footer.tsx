@@ -7,7 +7,7 @@ export default function Footer({ locale }: { locale: Locale }) {
   const copy = footerCopy[safeLocale] || footerCopy.fr;
   
   return (
-    <footer className="border-t border-sage/30">
+    <footer className="border-t backdrop-blur bg-background/70  border-sage/30">
       <div className="mx-auto max-w-6xl px-4 py-8 text-sm flex flex-col gap-2 sm:flex-row sm:items-center sm:justify-between">
         <p className="opacity-80">© {new Date().getFullYear()} Odonate — {copy}</p>
         <div className="flex gap-4">
