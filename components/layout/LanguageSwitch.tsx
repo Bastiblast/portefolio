@@ -21,6 +21,7 @@ export function LanguageSwitch({ locale }: { locale: Locale }) {
       size="sm"
       onClick={toggle}
       aria-label="Switch language"
+      className="hover:bg-transparent hover:text-petrol"
     >
       {locale === "fr" ? "EN" : "FR"}
     </Button>
