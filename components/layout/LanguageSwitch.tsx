@@ -17,10 +17,10 @@ export function LanguageSwitch({ locale }: { locale: Locale }) {
   return (
     <button
       onClick={toggle}
-      className="px-3 py-2 rounded-md text-sm font-medium transition-colors hover:bg-petrol/15 hover:text-petrol focus:outline-none focus:ring-2 focus:ring-sage focus:ring-offset-2"
+      className="group px-3 py-2 rounded-md text-sm font-medium transition-all hover:bg-petrol/15"
       aria-label="Switch language"
     >
-      {locale === "fr" ? "EN" : "FR"}
+      <span className="group-hover:text-petrol transition-colors">{locale === "fr" ? "EN" : "FR"}</span>
     </button>
   );
 }

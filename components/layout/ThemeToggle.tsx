@@ -16,9 +16,9 @@ export function ThemeToggle() {
     return (
       <button
         aria-label="Toggle theme"
-        className="px-3 py-2 rounded-md text-sm font-medium transition-colors hover:bg-petrol/15 hover:text-petrol focus:outline-none focus:ring-2 focus:ring-sage focus:ring-offset-2"
+        className="group px-3 py-2 rounded-md text-sm font-medium transition-all hover:bg-petrol/15"
       >
-        <Moon size={16} className="pointer-events-none" />
+        <Moon size={16} className="pointer-events-none group-hover:text-petrol transition-colors" />
       </button>
     );
   }
@@ -28,9 +28,9 @@ export function ThemeToggle() {
     <button
       aria-label="Toggle theme"
       onClick={() => setTheme(isDark ? "light" : "dark")}
-      className="px-3 py-2 rounded-md text-sm font-medium transition-colors hover:bg-petrol/15 hover:text-petrol focus:outline-none focus:ring-2 focus:ring-sage focus:ring-offset-2"
+      className="group px-3 py-2 rounded-md text-sm font-medium transition-all hover:bg-petrol/15"
     >
-      {isDark ? <Sun size={16} className="pointer-events-none" /> : <Moon size={16} className="pointer-events-none" />}
+      {isDark ? <Sun size={16} className="pointer-events-none group-hover:text-petrol transition-colors" /> : <Moon size={16} className="pointer-events-none group-hover:text-petrol transition-colors" />}
     </button>
   );
 }
