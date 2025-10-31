@@ -37,7 +37,7 @@ export default function NavBar({ locale }: { locale: Locale }) {
   const Links = () => {
 
     return (
-                <ButtonGroup className="">
+                <ButtonGroup className="h-12">
             <Link href={base} className="no-underline">
               <ButtonGroupItem data-active={pathname === base}>
               {t.home}

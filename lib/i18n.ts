@@ -1,7 +1,7 @@
 export type Locale = "fr" | "en";
 
 export const nav = {
-  fr: { home: "Accueil", about: "À propos", experience: "Expérience", projects: "Projets", contact: "Contact" },
+  fr: { home: "Accueil", about: "A propos", experience: "Expérience", projects: "Projets", contact: "Contact" },
   en: { home: "Home", about: "About", experience: "Experience", projects: "Projects", contact: "Contact" },
 } as const;
 

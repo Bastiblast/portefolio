@@ -38,13 +38,13 @@ export default function Hero({ locale }: { locale: Locale }) {
       >
         <Link
           href={`/${locale}/projects`}
-          className="rounded-md border border-copper px-4 py-2 text-sm text-copper hover:bg-sage hover:text-ivory hover:border-sage transition-colors no-underline decoration-amber-300  decoration-0"
+          className="rounded-md border border-copper bg-white/50 px-4 py-2 text-sm text-copper hover:bg-petrol hover:text-ivory hover:border-sage transition-all duration-300 no-underline"
         >
           {t.ctaProjects}
         </Link>
         <Link
           href={`/${locale}/contact`}
-          className="rounded-md border border-copper px-4 py-2 text-sm text-copper hover:bg-petrol hover:text-ivory hover:border-petrol transition-colors no-underline decoration-0"
+          className="rounded-md border border-copper bg-white/50 px-4 py-2 text-sm text-copper hover:bg-petrol hover:text-ivory hover:border-petrol transition-all duration-300 no-underline"
         >
           {t.ctaContact}
         </Link>

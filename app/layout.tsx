@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import { Inter, Lora, EB_Garamond } from "next/font/google";
 import "./globals.css";
 import Providers from "@/components/layout/ThemeProvider";
-import DecorImages from "@/components/decor/DecorImages";
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
 const lora = Lora({ subsets: ["latin"], variable: "--font-lora" });
@@ -29,8 +28,7 @@ export default function RootLayout({
 }>) {
   return (
      <html lang="fr" suppressHydrationWarning>
-       <body className={`${inter.variable} ${lora.variable} ${ebg.variable} font-sans h-screen overflow-hidden`}>
-         {false && <DecorImages />}
+       <body className={`${inter.variable} ${lora.variable} ${ebg.variable} font-sans min-h-screen w-full overflow-hidden`}>
          <Providers>{children}</Providers>
        </body>
      </html>
