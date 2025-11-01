@@ -21,9 +21,9 @@ export default function ProjectCard({ project, locale, index }: ProjectCardProps
     >
       <Link 
         href={`/${locale}/projects/${project.id}`}
-        className="flex items-center gap-4 p-4 border border-sage/30 rounded-lg hover:bg-ivory/20 hover:border-sage transition-all hover:shadow-lg group no-underline"
+        className="flex items-center gap-4 p-4 border border-border rounded-lg hover:bg-muted/30 hover:border-primary transition-all hover:shadow-lg group no-underline"
       >
-        <div className="relative w-16 h-16 flex-shrink-0 bg-ivory dark:bg-charcoal rounded-md overflow-hidden">
+        <div className="relative w-16 h-16 flex-shrink-0 bg-card rounded-md overflow-hidden">
           <Image
             src={project.image}
             alt={project.title[locale]}
@@ -33,15 +33,15 @@ export default function ProjectCard({ project, locale, index }: ProjectCardProps
         </div>
         
         <div className="flex-1">
-          <h2 className="font-serif text-xl text-charcoal group-hover:text-petrol transition-colors">
+          <h2 className="font-serif text-xl text-foreground group-hover:text-secondary transition-colors">
             {project.title[locale]}
           </h2>
-          <p className="mt-1 text-sm opacity-80 group-hover:opacity-100 text-petrol group-hover:text-charcoal ">
+          <p className="mt-1 text-sm text-muted-foreground group-hover:text-foreground transition-colors">
             {project.shortDescription[locale]}
           </p>
         </div>
         
-        <div className="opacity-0 group-hover:opacity-100 transition-opacity" aria-hidden="true">
+        <div className="opacity-0 group-hover:opacity-100 transition-opacity text-secondary" aria-hidden="true">
           <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" role="img" aria-label="View project">
             <path d="M5 12h14"/>
             <path d="m12 5 7 7-7 7"/>

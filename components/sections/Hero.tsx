@@ -42,7 +42,7 @@ export default function Hero({ locale }: { locale: Locale }) {
         </Link>
         <Link
           href={`/${locale}/contact`}
-          className="rounded-md border border-accent bg-card/80 px-4 py-2 text-sm text-accent hover:bg-accent hover:text-accent-foreground hover:border-accent transition-all duration-300 no-underline font-medium"
+          className="rounded-md border border-accent bg-card/80 px-4 py-2 text-sm text-accent hover:bg-primary-foreground hover:text-accent hover:border-accent transition-all duration-300 no-underline font-medium"
         >
           {t.ctaContact}
         </Link>

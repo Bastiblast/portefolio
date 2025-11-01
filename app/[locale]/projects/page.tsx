@@ -9,7 +9,7 @@ export default async function Projects({ params }: { params: Promise<{ locale: L
 
   return (
     <section className="mx-auto max-w-4xl px-4 py-16">
-      <h1 className="font-serif text-3xl text-petrol mb-8">Projets</h1>
+      <h1 className="font-serif text-3xl text-secondary mb-8">Projets</h1>
       
       <div className="space-y-4">
         {projects.map((project, index) => (

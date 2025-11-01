@@ -4,11 +4,11 @@ export default async function About({ params }: { params: Promise<{ locale: Loca
   const { locale } = await params;
   return (
     <section className="mx-auto max-w-4xl px-4 py-16 space-y-4">
-      <h1 className="font-serif text-3xl text-petrol">À propos</h1>
-      <p>
+      <h1 className="font-serif text-3xl text-secondary">À propos</h1>
+      <p className="text-foreground/90">
         Développeur web — équilibre et mouvement. Parcours, philosophie et approche.
         Lien vers le CV:{" "}
-        <a href="https://lionside.fr/cvengine" target="_blank" rel="noreferrer">
+        <a href="https://lionside.fr/cvengine" target="_blank" rel="noreferrer" className="text-primary hover:text-secondary transition-colors">
           cvengine
         </a>
         .
