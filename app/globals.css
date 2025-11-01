@@ -2,86 +2,97 @@
 
 @custom-variant dark (&:is(.dark *));
 
-/* Couleurs personnalisées Odonate */
+/* Odonate Brand Colors */
 :root {
+  /* Base Odonate Colors */
   --color-sage: #8DAA91;
   --color-petrol: #355C7D;
   --color-copper: #B97A56;
   --color-ivory: #F5F3EE;
   --color-charcoal: #2E2E2E;
-  --border: oklch(0.923 0.003 48.717);
 
   color-scheme: light;
 
+  /* Design System - Light Theme */
   --radius: 0.625rem;
 
-  --background: oklch(1 0 0);
-
-  --foreground: oklch(0.147 0.004 49.25);
-
-  --card: oklch(1 0 0);
-
-  --card-foreground: oklch(0.147 0.004 49.25);
-
-  --popover: oklch(1 0 0);
-
-  --popover-foreground: oklch(0.147 0.004 49.25);
-
-  --primary: oklch(0.216 0.006 56.043);
-
-  --primary-foreground: oklch(0.985 0.001 106.423);
-
-  --secondary: oklch(0.97 0.001 106.424);
-
-  --secondary-foreground: oklch(0.216 0.006 56.043);
-
-  --muted: oklch(0.97 0.001 106.424);
-
-  --muted-foreground: oklch(0.553 0.013 58.071);
-
-  --accent: oklch(0.97 0.001 106.424);
-
-  --accent-foreground: oklch(0.216 0.006 56.043);
-
-  --destructive: oklch(0.577 0.245 27.325);
-
-  --input: oklch(0.923 0.003 48.717);
-
-  --ring: oklch(0.709 0.01 56.259);
-
-  --chart-1: oklch(0.646 0.222 41.116);
-
-  --chart-2: oklch(0.6 0.118 184.704);
-
-  --chart-3: oklch(0.398 0.07 227.392);
-
-  --chart-4: oklch(0.828 0.189 84.429);
-
-  --chart-5: oklch(0.769 0.188 70.08);
-
-  --sidebar: oklch(0.985 0.001 106.423);
-
-  --sidebar-foreground: oklch(0.147 0.004 49.25);
-
-  --sidebar-primary: oklch(0.216 0.006 56.043);
-
-  --sidebar-primary-foreground: oklch(0.985 0.001 106.423);
-
-  --sidebar-accent: oklch(0.97 0.001 106.424);
-
-  --sidebar-accent-foreground: oklch(0.216 0.006 56.043);
-
-  --sidebar-border: oklch(0.923 0.003 48.717);
-
-  --sidebar-ring: oklch(0.709 0.01 56.259);
+  /* Background & Surface Colors */
+  --background: #FFFFFF;
+  --foreground: #2E2E2E;
+  
+  /* Card Colors */
+  --card: #F5F3EE;
+  --card-foreground: #2E2E2E;
+  
+  /* Popover Colors */
+  --popover: #FFFFFF;
+  --popover-foreground: #2E2E2E;
+  
+  /* Primary - Sage (main brand color) */
+  --primary: #8DAA91;
+  --primary-foreground: #FFFFFF;
+  
+  /* Secondary - Petrol (complementary) */
+  --secondary: #355C7D;
+  --secondary-foreground: #FFFFFF;
+  
+  /* Muted - Soft backgrounds */
+  --muted: #E8E6E1;
+  --muted-foreground: #5A5A5A;
+  
+  /* Accent - Copper (highlights) */
+  --accent: #B97A56;
+  --accent-foreground: #FFFFFF;
+  
+  /* Destructive - Warm red */
+  --destructive: #C94A3D;
+  --destructive-foreground: #FFFFFF;
+  
+  /* Input & Borders */
+  --input: #D4D2CC;
+  --border: rgba(141, 170, 145, 0.3);
+  --ring: #8DAA91;
 }
 
 html.dark {
+  color-scheme: dark;
+
+  /* Dark Theme Colors */
   --background: #2E2E2E;
   --foreground: #F5F3EE;
-  --border: #8DAA91;
-
-  color-scheme: dark;
+  
+  /* Card Colors */
+  --card: #3A3A3A;
+  --card-foreground: #F5F3EE;
+  
+  /* Popover Colors */
+  --popover: #3A3A3A;
+  --popover-foreground: #F5F3EE;
+  
+  /* Primary - Sage (lighter for dark mode) */
+  --primary: #A4C5AA;
+  --primary-foreground: #1F1F1F;
+  
+  /* Secondary - Petrol (lighter for dark mode) */
+  --secondary: #4A7A9D;
+  --secondary-foreground: #FFFFFF;
+  
+  /* Muted - Dark backgrounds */
+  --muted: #3F3F3F;
+  --muted-foreground: #B8B6B1;
+  
+  /* Accent - Copper (adjusted for dark) */
+  --accent: #D4956C;
+  --accent-foreground: #1F1F1F;
+  
+  /* Destructive - Lighter red for dark */
+  --destructive: #E55A4C;
+  --destructive-foreground: #FFFFFF;
+  
+  /* Input & Borders */
+  --input: #4A4A4A;
+  --border: rgba(141, 170, 145, 0.3);
+  --ring: #A4C5AA;
 }
 
 * {
@@ -92,30 +103,33 @@ body {
   font-family: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
 }
 
-
+/* Link styles */
+a {
+  color: var(--secondary);
+  text-decoration: none;
+}
 
 a:hover {
-  color: var(--color-petrol);
+  color: var(--primary);
 }
 
 html.dark a:hover {
-  color: var(--color-sage);
+  color: var(--primary);
 }
 
-/* Focus */
+/* Focus states - Enhanced accessibility */
 :focus-visible {
-  outline: 3px solid var(--color-sage);
+  outline: 3px solid var(--ring);
   outline-offset: 3px;
   border-radius: 4px;
 }
 
-/* Enhanced focus for interactive elements */
 button:focus-visible,
 a:focus-visible,
 input:focus-visible,
 select:focus-visible,
 textarea:focus-visible {
-  outline: 3px solid var(--color-sage);
+  outline: 3px solid var(--ring);
   outline-offset: 2px;
   box-shadow: 0 0 0 4px rgba(141, 170, 145, 0.1);
 }
@@ -125,21 +139,20 @@ html.dark a:focus-visible,
 html.dark input:focus-visible,
 html.dark select:focus-visible,
 html.dark textarea:focus-visible {
-  outline-color: var(--color-sage);
-  box-shadow: 0 0 0 4px rgba(141, 170, 145, 0.2);
+  outline-color: var(--ring);
+  box-shadow: 0 0 0 4px rgba(164, 197, 170, 0.2);
 }
 
 @theme inline {
+  /* Radius */
   --radius-sm: calc(var(--radius) - 4px);
   --radius-md: calc(var(--radius) - 2px);
   --radius-lg: var(--radius);
   --radius-xl: calc(var(--radius) + 4px);
+  
+  /* Semantic Colors */
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --color-card: var(--card);
-  --color-card-foreground: var(--card-foreground);
-  --color-popover: var(--popover);
-  --color-popover-foreground: var(--popover-foreground);
   --color-primary: var(--primary);
   --color-primary-foreground: var(--primary-foreground);
   --color-secondary: var(--secondary);
@@ -149,75 +162,34 @@ html.dark textarea:focus-visible {
   --color-accent: var(--accent);
   --color-accent-foreground: var(--accent-foreground);
   --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
   --color-border: var(--border);
   --color-input: var(--input);
   --color-ring: var(--ring);
-  --color-chart-1: var(--chart-1);
-  --color-chart-2: var(--chart-2);
-  --color-chart-3: var(--chart-3);
-  --color-chart-4: var(--chart-4);
-  --color-chart-5: var(--chart-5);
-  --color-sidebar: var(--sidebar);
-  --color-sidebar-foreground: var(--sidebar-foreground);
-  --color-sidebar-primary: var(--sidebar-primary);
-  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
-  --color-sidebar-accent: var(--sidebar-accent);
-  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
-  --color-sidebar-border: var(--sidebar-border);
-  --color-sidebar-ring: var(--sidebar-ring);
   
-  /* Odonate custom colors */
-  --color-sage: var(--color-sage);
-  --color-petrol: var(--color-petrol);
-  --color-copper: var(--color-copper);
-  --color-ivory: var(--color-ivory);
-  --color-charcoal: var(--color-charcoal);
-}
-
-.dark {
-  --background: oklch(0.147 0.004 49.25);
-  --foreground: oklch(0.985 0.001 106.423);
-  --card: oklch(0.216 0.006 56.043);
-  --card-foreground: oklch(0.985 0.001 106.423);
-  --popover: oklch(0.216 0.006 56.043);
-  --popover-foreground: oklch(0.985 0.001 106.423);
-  --primary: oklch(0.923 0.003 48.717);
-  --primary-foreground: oklch(0.216 0.006 56.043);
-  --secondary: oklch(0.268 0.007 34.298);
-  --secondary-foreground: oklch(0.985 0.001 106.423);
-  --muted: oklch(0.268 0.007 34.298);
-  --muted-foreground: oklch(0.709 0.01 56.259);
-  --accent: oklch(0.268 0.007 34.298);
-  --accent-foreground: oklch(0.985 0.001 106.423);
-  --destructive: oklch(0.704 0.191 22.216);
-  --border: oklch(1 0 0 / 10%);
-  --input: oklch(1 0 0 / 15%);
-  --ring: oklch(0.553 0.013 58.071);
-  --chart-1: oklch(0.488 0.243 264.376);
-  --chart-2: oklch(0.696 0.17 162.48);
-  --chart-3: oklch(0.769 0.188 70.08);
-  --chart-4: oklch(0.627 0.265 303.9);
-  --chart-5: oklch(0.645 0.246 16.439);
-  --sidebar: oklch(0.216 0.006 56.043);
-  --sidebar-foreground: oklch(0.985 0.001 106.423);
-  --sidebar-primary: oklch(0.488 0.243 264.376);
-  --sidebar-primary-foreground: oklch(0.985 0.001 106.423);
-  --sidebar-accent: oklch(0.268 0.007 34.298);
-  --sidebar-accent-foreground: oklch(0.985 0.001 106.423);
-  --sidebar-border: oklch(1 0 0 / 10%);
-  --sidebar-ring: oklch(0.553 0.013 58.071);
+  /* Odonate Brand Colors (still accessible for specific use) */
+  --color-sage: #8DAA91;
+  --color-petrol: #355C7D;
+  --color-copper: #B97A56;
+  --color-ivory: #F5F3EE;
+  --color-charcoal: #2E2E2E;
 }
 
 @layer base {
   * {
     @apply border-border outline-ring/50;
   }
+  
   body {
-    @apply text-foreground;
-    background: linear-gradient(to top, #355b7da4, #6b98c0a4, #F5F3EE);
+    @apply bg-background text-foreground;
+    background: linear-gradient(to top, rgba(185, 122, 86, 0.1), rgba(245, 243, 238, 0.5), #FFFFFF);
   }
-}
-
-html.dark body {
-  background: linear-gradient(to top, #8DAA9118, #355C7D15, #2E2E2E);
+  
+  html.dark body {
+    background: linear-gradient(to top, rgba(46, 46, 46, 1), rgba(53, 92, 125, 0.1), rgba(46, 46, 46, 1));
+  }
 }

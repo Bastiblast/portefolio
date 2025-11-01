@@ -8,7 +8,7 @@ const ButtonGroup = React.forwardRef<
   <div
     ref={ref}
     className={cn(
-      "inline-flex items-center rounded-lg border border-sage/30 bg-background p-1",
+      "inline-flex items-center rounded-lg border border-border bg-background p-1",
       className
     )}
     {...props}
@@ -23,9 +23,9 @@ const ButtonGroupItem = React.forwardRef<
   <button
     ref={ref}
     className={cn(
-      "px-3 py-2 rounded-md text-sm font-medium transition-colors",
-      "hover:bg-petrol/15 hover:text-petrol focus:outline-none focus:ring-2 focus:ring-sage focus:ring-offset-2",
-      "data-[active=true]:bg-sage data-[active=true]:text-ivory",
+      "px-3 py-2 rounded-md text-sm font-medium transition-colors text-foreground",
+      "hover:bg-secondary/10 hover:text-secondary focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2",
+      "data-[active=true]:bg-primary data-[active=true]:text-primary-foreground",
       className
     )}
     {...props}
