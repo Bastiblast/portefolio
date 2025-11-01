@@ -20,7 +20,8 @@ export function LanguageSwitch({ locale }: { locale: Locale }) {
       variant="ghost"
       size="sm"
       onClick={toggle}
-      aria-label="Switch language"
+      aria-label={locale === "fr" ? "EN" : "FR"}
+      title={locale === "fr" ? "Switch to English" : "Passer en français"}
       className="text-foreground hover:bg-transparent hover:text-[#8DAA91] transition-colors"
     >
       {locale === "fr" ? "EN" : "FR"}
