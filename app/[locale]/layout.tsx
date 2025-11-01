@@ -8,7 +8,7 @@ export default async function LocaleLayout({
   params,
 }: {
   children: React.ReactNode;
-  params: Promise<{ locale: Locale }>;
+  params: Promise<{ locale: string }>;
 }) {
   const { locale } = await params;
   
@@ -16,13 +16,13 @@ export default async function LocaleLayout({
 
   return (
     <div className="flex flex-col min-h-screen w-full">
-      <NavBar locale={locale} />
+      <NavBar locale={locale as Locale} />
       <main className="flex-1 overflow-y-auto">
         <Suspense fallback={<div className="animate-pulse bg-background" />}>
           {children}
         </Suspense>
       </main>
-      <Footer locale={locale} />
+      <Footer locale={locale as Locale} />
     </div>
   );
 }

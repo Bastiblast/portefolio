@@ -5,7 +5,9 @@
   "scripts": {
     "dev": "next dev --turbopack",
     "build": "next build --turbopack",
-    "start": "next start"
+    "start": "next start",
+    "test:a11y": "node scripts/a11y-test.js",
+    "scan:a11y": "npx achecker scan-list.txt"
   },
   "dependencies": {
     "@radix-ui/react-slot": "^1.2.3",
@@ -27,6 +29,7 @@
     "@types/node": "^20",
     "@types/react": "^19",
     "@types/react-dom": "^19",
+    "accessibility-checker": "^4.0.9",
     "tailwindcss": "^4",
     "typescript": "^5"
   }

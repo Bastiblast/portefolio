@@ -1,0 +1,31 @@
+# Accessibility policies to check against
+policies:
+  - IBM_Accessibility
+  - WCAG_2_1
+
+# Rule archive version
+ruleArchive: latest
+
+# Fail the scan if these levels are found
+failLevels:
+  - violation
+
+# Report these levels
+reportLevels:
+  - violation
+  - potentialviolation
+  - recommendation
+
+# Output formats (json, csv, html)
+outputFormat:
+  - json
+  - html
+
+# Where to save results
+outputFolder: accessibility-reports
+
+# Baseline folder for comparison
+baselineFolder: accessibility-baseline
+
+# Label for the scan
+label: portfolio-accessibility-scan

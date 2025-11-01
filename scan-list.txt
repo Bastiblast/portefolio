@@ -1,0 +1,14 @@
+http://localhost:3000/fr
+http://localhost:3000/en
+http://localhost:3000/fr/about
+http://localhost:3000/en/about
+http://localhost:3000/fr/projects
+http://localhost:3000/en/projects
+http://localhost:3000/fr/projects/homy
+http://localhost:3000/en/projects/homy
+http://localhost:3000/fr/projects/scolar-flashcard
+http://localhost:3000/en/projects/scolar-flashcard
+http://localhost:3000/fr/contact
+http://localhost:3000/en/contact
+http://localhost:3000/fr/experience
+http://localhost:3000/en/experience
