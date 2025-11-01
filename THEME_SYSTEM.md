@@ -16,6 +16,26 @@ The Odonate portfolio uses a semantic color system based on the brand colors (Sa
 
 ## Semantic Color Tokens
 
+### Understanding the Naming Convention
+
+**Important**: The `-foreground` suffix means "what goes in the foreground (text) when using this background color"
+
+```tsx
+// ✅ Correct usage
+<button className="bg-primary text-primary-foreground">
+  // Background: Sage, Text: White
+</button>
+
+// ❌ Wrong
+<button className="bg-primary-foreground text-primary">
+  // This would be backwards!
+</button>
+```
+
+**Rule of thumb**: 
+- `primary` = background color
+- `primary-foreground` = text color for that background
+
 ### Light Theme
 
 | Token | Color | Usage | Contrast |
