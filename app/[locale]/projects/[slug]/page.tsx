@@ -27,6 +27,7 @@ export default async function ProjectPage({
       backToProjects: "← Retour aux projets",
       viewDemo: "Voir la démo",
       viewGithub: "Voir sur GitHub",
+      viewFireBase: "Voir sur FireBase",
       technologies: "Technologies",
       description: "Description"
     },
@@ -34,6 +35,7 @@ export default async function ProjectPage({
       backToProjects: "← Back to projects",
       viewDemo: "View Demo",
       viewGithub: "View on GitHub",
+      viewFireBase: "View on FireBase",
       technologies: "Technologies",
       description: "Description"
     }
@@ -45,7 +47,7 @@ export default async function ProjectPage({
     <section className="mx-auto max-w-4xl px-4 py-16">
       <Link 
         href={`/${locale}/projects`}
-        className="inline-flex items-center text-primary hover:text-secondary transition-colors mb-8 no-underline"
+        className="inline-flex items-center text-secondary hover:text-secondary transition-colors mb-8 no-underline hover:underline"
       >
         {t.backToProjects}
       </Link>
@@ -71,7 +73,7 @@ export default async function ProjectPage({
                 {project.tags.map((tag) => (
                   <span
                     key={tag}
-                    className="px-3 py-1 text-sm bg-primary/10 text-primary rounded-full border border-border"
+                    className="px-3 py-1 text-sm bg-primary/10 text-secondry rounded-full border border-border"
                   >
                     {tag}
                   </span>
@@ -85,7 +87,7 @@ export default async function ProjectPage({
                   href={project.demoUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 px-6 py-3 bg-primary text-primary-foreground rounded-lg hover:bg-primary/90 transition-colors no-underline font-medium"
+                  className="inline-flex items-center gap-2 px-6 py-3 bg-primary text-primary-foreground hover:text-primary hover:bg-primary-foreground rounded-lg border-1 hover:border-primary transition-colors no-underline font-medium"
                 >
                   <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" role="img" aria-label="External link icon">
                     <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>
@@ -108,6 +110,17 @@ export default async function ProjectPage({
                     <path d="M9 18c-4.51 2-5-2-7-2"/>
                   </svg>
                   {t.viewGithub}
+                </Link>
+              )}
+                            {project.externalUrl && (
+                <Link
+                  href={project.externalUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 px-6 py-3 border border-primary text-primary rounded-lg hover:bg-primary hover:text-primary-foreground transition-colors no-underline font-medium"
+                >
+                  <Image alt={"Logo FireBase"} width={50} height={50} src={"/logo-firebase.png"}/>
+                  {t.viewFireBase}
                 </Link>
               )}
             </div>

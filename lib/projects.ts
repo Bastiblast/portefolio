@@ -19,6 +19,7 @@ export interface Project {
   image: string;
   demoUrl?: string;
   githubUrl?: string;
+  externalUrl?:string,
   tags: string[];
   featured: boolean;
 }

@@ -7,14 +7,12 @@ export default function Footer({ locale }: { locale: Locale }) {
   const copy = footerCopy[safeLocale] || footerCopy.fr;
   
   return (
-    <footer className="border-t backdrop-blur text-secondary bg-background/30 border-border">
+    <footer className="border-t backdrop-blur bg-background/30 border-sage">
       <div className="mx-auto max-w-6xl px-4 py-8 text-sm flex flex-col gap-2 sm:flex-row sm:items-center sm:justify-between">
-        <p className="text-muted-foreground">© {new Date().getFullYear()} Odonate — {copy}</p>
+        <p className="text-foreground">© {new Date().getFullYear()} Odonate — {copy}</p>
         <div className="flex gap-4 text-muted-foreground">
-          <Link href="https://lionside.fr/cvengine" className="hover:text-primary transition-colors">
-            CV
-          </Link>
-          <span className="opacity-60">Odonate.fr</span>
+
+          <span className="opacity-60 text-foreground">Odonate.fr</span>
         </div>
       </div>
     </footer>

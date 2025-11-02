@@ -23,6 +23,7 @@ export const customProjects: Partial<Record<string, Partial<Project>>> = {
       en: "Flashcard application for effective learning. Create, organize and review your cards with a spaced repetition system to improve retention."
     },
     tags: ["React", "TypeScript", "Vite", "Education"],
+    externalUrl: "https://bastiblast-hub.web.app/",
     featured: false
   },
 

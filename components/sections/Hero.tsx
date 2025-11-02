@@ -20,7 +20,7 @@ export default function Hero({ locale }: { locale: Locale }) {
       </motion.h1>
 
       <motion.p
-        className="mt-4 max-w-2xl text-base sm:text-lg text-foreground/90"
+        className="mt-4 max-w-2xl text-base sm:text-lg text-foreground"
         initial={{ opacity: 0, y: 6 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.15, duration: 0.5 }}
@@ -36,13 +36,13 @@ export default function Hero({ locale }: { locale: Locale }) {
       >
         <Link
           href={`/${locale}/projects`}
-          className="rounded-md border border-primary bg-card/80 px-4 py-2 text-sm text-primary hover:bg-primary hover:text-primary-foreground hover:border-primary transition-all duration-300 no-underline font-medium"
+          className="rounded-md border border-primary bg-card/80 px-4 py-2 text-sm text-card-foreground hover:bg-primary hover:text-primary-foreground hover:border-primary transition-all duration-300 no-underline font-medium"
         >
           {t.ctaProjects}
         </Link>
         <Link
           href={`/${locale}/contact`}
-          className="rounded-md border border-primary bg-card/80 px-4 py-2 text-sm text-primary hover:bg-primary hover:text-primary-foreground hover:border-primary transition-all duration-300 no-underline font-medium"
+          className="rounded-md border border-primary bg-card/80 px-4 py-2 text-sm text-card-foreground hover:bg-primary hover:text-primary-foreground hover:border-primary transition-all duration-300 no-underline font-medium"
         >
           {t.ctaContact}
         </Link>

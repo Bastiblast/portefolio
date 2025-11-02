@@ -131,3 +131,11 @@ html.dark {
   --color-ivory: #F5F3EE;
   --color-charcoal: #2E2E2E;
 }
+
+html {
+  @apply bg-gradient-to-t from-primary via-card to-card
+}
+
+html.dark {
+  @apply bg-gradient-to-t from-primary via-card to-card
+}
